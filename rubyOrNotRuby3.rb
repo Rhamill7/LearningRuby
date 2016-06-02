@@ -1,61 +1,29 @@
-x = 1
+print "Enter a number : "
+first_num = gets.to_i
+print "Enter Another : "
+second_num = gets.to_i
 
-loop do
-	x += 1 
+begin
+	answer = first_num / second_num
 	
-	next unless (x % 2) == 0
-	puts x 
-	
-	break if x >=10
+rescue
+	puts "You can't divide by zero"
+	exit
 end
 
-y = 1
+puts "#{first_num} / #{second_num} = #{answer}"
 
-while y <=10
-	y += 1
-	next unless (y % 2) == 0
-	puts y
-end
-	
-a = 1
+age = 12
 
-until a >= 10 
-	a += 1
-	next unless (a % 2) == 0
-	puts a
+def check_age(age)
+	raise ArhumentError, "Enter Positive Number" unless age > 0
 end
 
-numbers = [1,2,3,4,5]
-
-for number in  numbers
-	puts "#{number}, "
-	print "#{number}, "
+begin
+	check age(-1)
+rescue ArhumentError
+	puts "That is an impossible age"
 end
 
-shopping = ["bananas", "sweet potatoes", "pasta", "tomatoes"]
-
-shopping.each do |food|
-	puts "Get some #{food}"
-end
-
-(0..5).each do |i|
-	puts "# #{i}"
-end
-
-def add_nums(num_1, num_2)
-	return num_1.to_i + num_2.to_i
-end
-
-puts add_nums(3,4)
-
-x = 1
-
-def change_x(x)
-	x = 4
-end
-
-change_x(x)
-
-puts "x=#{x}"
-
-
+puts "Add Them #{4 + 5} \n\n"
+puts 'Add Them #{4 + 5} \n\n'
