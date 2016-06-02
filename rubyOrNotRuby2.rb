@@ -1,21 +1,40 @@
-num_one = 1.000
+age = 12
 
-num99 = 0.999
+#Comparison : == != < > <= >=
+#Logical : && || ! and or not
 
-puts num_one.to_s + " - " + num99.to_s + " = " + 
-(num_one - num99).to_s
+if(age>=5) && (age <=6)
+	puts "You're in Nursery"
+elsif (age>=7) && (age <=13)
+	puts "You are in Primary School"
+	puts "Yeah"
+else
+	puts "Stay Home"
+end
 
-big_float = 1.12345678901234
+puts "true && false = " + (true && false).to_s
+puts "true || false = " + (true || false).to_s
+puts "!false = " + (!false).to_s
+puts "5 <=> 10 = " + (5 <=> 10).to_s
+unless age > 4
+	puts "No School"
+else
+	puts "Go to School"
+end
 
-puts (big_float + 0.0000000000005).to_s
+print "Enter Greeting : "
 
-puts 1.class
-puts 1.234.class 
-puts "A String".class
+greeting = gets.chomp
 
-A_CONSTANT = 31.4
+case greeting
+when "French","french"
+	puts "Bonjour"
+	exit
+when "Spanish", "spanish"
+	puts "Hola"
+	exit
+else "English"
+	puts "Hello"
+end
 
-A_CONSTANT = 1.6
-
-puts A_CONSTANT
-
+puts (age >= 50) ? "Old" : "Young"
